@@ -222,6 +222,10 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     power.msm8992
 
+# RIL symbols
+PRODUCT_PACKAGES += \
+    liblge
+
 # USB
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
