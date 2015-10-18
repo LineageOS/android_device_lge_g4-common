@@ -53,6 +53,7 @@ on early-fs
 
 on init
 
+    export LD_PRELOAD /system/lib/liblge.so
     mkdir /firmware 0771 system system
     mkdir /firmware/image 0771 system system
     mkdir /persist/data 0700 system system
