@@ -145,8 +145,8 @@ set_speaker_light_locked(struct light_device_t* dev,
                 break;
             case LIGHT_FLASH_NONE:
             default:
-                onMS = -1;
-                offMS = -1;
+                onMS = 0;
+                offMS = 0;
                 break;
         }
 
