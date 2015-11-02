@@ -47,6 +47,15 @@ char const*const LCD_FILE
 char const*const EMOTIONAL_BLINK_FILE
         = "/sys/class/lg_rgb_led/use_patterns/blink_patterns";
 
+char const*const LED_RED_FILE
+        = "/sys/class/leds/red/brightness";
+
+char const*const LED_GREEN_FILE
+        = "/sys/class/leds/green/brightness";
+
+char const*const LED_BLUE_FILE
+        = "/sys/class/leds/blue/brightness";
+
 /**
  * device methods
  */
@@ -160,6 +169,28 @@ set_speaker_light_locked(struct light_device_t* dev,
     return 0;
 }
 
+static int
+set_light_battery(struct light_device_t* dev,
+        struct light_state_t const* state)
+{
+    int err = 0;
+    unsigned int red, green, blue;
+
+    pthread_mutex_lock(&g_lock);
+    g_battery = *state;
+
+    red = (state->color >> 16) & 0xFF;
+    green = (state->color >> 8) & 0xFF;
+    blue = state->color & 0xFF;
+
+    err = write_int(LED_RED_FILE, red);
+    err = write_int(LED_GREEN_FILE, green);
+    err = write_int(LED_BLUE_FILE, blue);
+    
+    pthread_mutex_unlock(&g_lock);
+    return err;
+}
+
 static void
 handle_led_prioritized_locked(struct light_device_t* dev,
         struct light_state_t const* state)
@@ -169,22 +200,11 @@ handle_led_prioritized_locked(struct light_device_t* dev,
     } else if (is_lit(&g_notification)) {
         set_speaker_light_locked(dev, &g_notification);
     } else if(is_lit(&g_battery)) {
-        set_speaker_light_locked(dev, &g_battery);
+        set_light_battery(dev, &g_battery);
     } else {
         set_speaker_light_locked(dev, &g_notification);
     }
 
-}
-
-static int
-set_light_battery(struct light_device_t* dev,
-        struct light_state_t const* state)
-{
-    pthread_mutex_lock(&g_lock);
-    g_battery = *state;
-    handle_led_prioritized_locked(dev, state);
-    pthread_mutex_unlock(&g_lock);
-    return 0;
 }
 
 static int set_light_notifications(struct light_device_t* dev,
@@ -219,7 +239,6 @@ set_light_attention(struct light_device_t* dev,
     pthread_mutex_unlock(&g_lock);
     return 0;
 }
-
 
 /** Close the lights device */
 static int
