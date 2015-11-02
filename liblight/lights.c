@@ -47,6 +47,9 @@ char const*const LCD_FILE
 char const*const EMOTIONAL_BLINK_FILE
         = "/sys/class/lg_rgb_led/use_patterns/blink_patterns";
 
+char const*const EMOTIONAL_ONOFF_FILE
+        = "/sys/class/lg_rgb_led/use_patterns/onoff_patterns";
+
 /**
  * device methods
  */
@@ -160,6 +163,26 @@ set_speaker_light_locked(struct light_device_t* dev,
     return 0;
 }
 
+static int
+set_light_battery(struct light_device_t* dev,
+        struct light_state_t const* state)
+{
+    unsigned int colorRGB;
+    char onoff_pattern[PAGE_SIZE];
+    
+    g_battery = *state;
+    colorRGB = state->color & 0x00ffffff;
+
+    sprintf(onoff_pattern,"0x%06x",colorRGB);
+    ALOGD("Using onoff pattern: 0x%06x\n",colorRGB);
+
+    pthread_mutex_lock(&g_lock);
+    write_str(EMOTIONAL_ONOFF_FILE, onoff_pattern);
+    pthread_mutex_unlock(&g_lock);
+
+    return 0;
+}
+
 static void
 handle_led_prioritized_locked(struct light_device_t* dev,
         struct light_state_t const* state)
@@ -169,22 +192,11 @@ handle_led_prioritized_locked(struct light_device_t* dev,
     } else if (is_lit(&g_notification)) {
         set_speaker_light_locked(dev, &g_notification);
     } else if(is_lit(&g_battery)) {
-        set_speaker_light_locked(dev, &g_battery);
+        set_light_battery(dev, &g_battery);
     } else {
         set_speaker_light_locked(dev, &g_notification);
     }
 
-}
-
-static int
-set_light_battery(struct light_device_t* dev,
-        struct light_state_t const* state)
-{
-    pthread_mutex_lock(&g_lock);
-    g_battery = *state;
-    handle_led_prioritized_locked(dev, state);
-    pthread_mutex_unlock(&g_lock);
-    return 0;
 }
 
 static int set_light_notifications(struct light_device_t* dev,
@@ -219,7 +231,6 @@ set_light_attention(struct light_device_t* dev,
     pthread_mutex_unlock(&g_lock);
     return 0;
 }
-
 
 /** Close the lights device */
 static int
