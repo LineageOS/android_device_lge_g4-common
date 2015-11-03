@@ -24,8 +24,8 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 -include $(LOCAL_PATH)/system_prop.mk
 
 # Screen density
-PRODUCT_AAPT_CONFIG := normal hdpi xhdpi xxhdpi 560dpi xxxhdpi
-PRODUCT_AAPT_PREF_CONFIG := 560dpi
+PRODUCT_AAPT_CONFIG := normal hdpi xhdpi xxhdpi xxxhdpi
+PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2560
@@ -146,7 +146,7 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    bdAddrLoader
+    hwaddrs
 
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
