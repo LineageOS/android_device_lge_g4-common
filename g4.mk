@@ -173,6 +173,10 @@ PRODUCT_PACKAGES += \
     make_ext4fs \
     setup_fs
 
+# Touchscreen
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl 
+
 # GPS
 PRODUCT_PACKAGES += \
     gps.msm8992
