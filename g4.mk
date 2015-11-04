@@ -205,6 +205,7 @@ PRODUCT_PACKAGES += \
     libOmxAacEnc \
     libOmxAmrEnc \
     libOmxCore \
+    libmm-omxcore \
     libOmxEvrcEnc \
     libOmxQcelp13Enc \
     libOmxSwVencMpeg4 \
