@@ -1,1 +1,2 @@
 type thermald_prop, property_type;
+type sensor_prop, property_type;
