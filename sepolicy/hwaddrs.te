@@ -9,3 +9,7 @@ allow hwaddrs misc_partition:blk_file { read open };
 
 allow hwaddrs wifi_data_file:file create_file_perms;
 allow hwaddrs bluetooth_data_file:file create_file_perms;
+
+allow hwaddrs block_device:dir { search };
+allow hwaddrs wifi_data_file:dir { search };
+allow hwaddrs system_data_file:dir { write };
