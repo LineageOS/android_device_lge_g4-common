@@ -29,6 +29,9 @@
 		<resource name="THRM_53-1" type="tz">/sys/class/thermal/thermal_zone22</resource> <!-- THRM_53-1 -->
 		<resource name="THRM_53-2" type="tz">/sys/class/thermal/thermal_zone23</resource> <!-- THRM_53-2 -->
 		<resource name="THRM_53-3" type="tz">/sys/class/thermal/thermal_zone24</resource> <!-- THRM_53-3 -->
+        
+        <resource name="xo_therm" type="tz">/sys/devices/soc.0/qpnp-vadc-ffffffc0c4928800/xo_therm</resource> <!-- soc die temp -->
+        
 
 		<resource name="temp-core" type="union">
 <!--			<resource name="msm_therm" /> -->
@@ -135,6 +138,7 @@
 		<mitigation level="1"><value resource="shutdown"/></mitigation>
 	</control>
 
+    <!--
 	<control name="backlight">
 		<mitigation level="off"><value resource="backlight">255</value></mitigation>
 		<mitigation level="1"><value resource="backlight">232</value></mitigation>
@@ -145,6 +149,7 @@
 		<mitigation level="6"><value resource="backlight">80</value></mitigation>
 		<mitigation level="7"><value resource="backlight">64</value></mitigation>
 	</control>
+    -->
 
 	<control name="gpu">
 		<mitigation level="off"><value resource="kgsl-3d0">600000000</value></mitigation>
