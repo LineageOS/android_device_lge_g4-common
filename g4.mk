@@ -177,6 +177,10 @@ PRODUCT_PACKAGES += \
     memtrack.msm8992 \
     liboverlay
 
+# Camera
+PRODUCT_PACKAGES += \
+    camera.msm8992
+
 # Keystore
 PRODUCT_PACKAGES += \
     keystore.msm8992 \
