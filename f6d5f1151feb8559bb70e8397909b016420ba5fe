@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ff82abbf_6ea9d4dd",
+        "filename": "rootdir/etc/init.qcom.rc",
+        "patchSetId": 2
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 523
+      },
+      "writtenOn": "2015-11-28T14:26:54Z",
+      "side": 1,
+      "message": "/system/lib64 ? or just libril.so without any path?",
+      "range": {
+        "startLine": 60,
+        "startChar": 32,
+        "endLine": 60,
+        "endChar": 35
+      },
+      "revId": "f6d5f1151feb8559bb70e8397909b016420ba5fe",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
