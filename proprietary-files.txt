@@ -17,7 +17,7 @@ lib/libmmcamera_interface.so
 lib/libvss_common_iface.so
 lib/libcir_driver.so
 lib/librilutils.so
-lib/hw/camera.msm8992.so
+lib/hw/camera.msm8992.so:lib/hw/camera.vendor.msm8992.so
 lib/hw/wbc_hal.default.so
 lib/hw/consumerir.msm8992.so
 lib/libVDBase.so
