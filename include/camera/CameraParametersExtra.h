@@ -19,9 +19,11 @@ const char CameraParameters::BURST_SHOT_OFF[] = "burst-shot"; \
 const char CameraParameters::BURST_SHOT_ON[] = "burst-shot"; \
 const char CameraParameters::KEY_BURST_SHOT[] = "burst-shot"; \
 const char CameraParameters::KEY_BURST_SHOT_SUPPORTED[] = "burst-shot-supported"; \
+const char CameraParameters::KEY_LGE_CAMERA[] = "lge-camera";
 
 #define CAMERA_PARAMETERS_EXTRA_H \
     static const char BURST_SHOT_OFF[]; \
     static const char BURST_SHOT_ON[]; \
     static const char KEY_BURST_SHOT[]; \
     static const char KEY_BURST_SHOT_SUPPORTED[]; \
+    static const char KEY_LGE_CAMERA[];
