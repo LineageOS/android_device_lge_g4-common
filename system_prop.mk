@@ -8,13 +8,15 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 # Camera
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    camera.disable_zsl_mode=1
+    persist.camera.HAL3.enabled=0 \
+    camera.disable_zsl_mode=1 \
+    camera2.portability.force_api=1
 
 # Camera add additional i/p buffer in case of encoder DCVS
 PRODUCT_PROPERTY_OVERRIDES += \
     vidc.enc.dcvs.extra-buff-count=2
 
-#Audio   
+#Audio
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.qc.sdk.audio.ssr=false \
     persist.audio.ssr.3mic=false \
