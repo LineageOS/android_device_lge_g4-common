@@ -61,7 +61,6 @@ vendor/lib/libmmcamera_isp_color_correct40.so
 vendor/lib/libchromatix_imx234_common_video.so
 vendor/lib/libwfduibcsink.so
 vendor/lib/libmmosal.so
-vendor/lib/libscale.so
 vendor/lib/libulp2.so
 vendor/lib/libchromatix_imx234_cpp_video_hdr.so
 vendor/lib/libchromatix_imx234_cpp_panorama.so
@@ -124,7 +123,6 @@ vendor/lib/libactuator_lc898122_claf_camera.so
 vendor/lib/libril-qcril-hook-oem.so
 vendor/lib/libactuator_rohm_bu64243gwz_camera.so
 vendor/lib/libchromatix_imx234_hfr_120_open.so
-vendor/lib/libOmxAmrwbplusDec.so
 vendor/lib/libextendedremotedisplay.so
 vendor/lib/libadreno_utils.so
 vendor/lib/libchromatix_imx234_cpp_video_hdr_open.so
@@ -208,7 +206,6 @@ vendor/lib/libmmcamera2_iface_modules.so
 vendor/lib/librs_adreno.so
 vendor/lib/libmmcamera_ppbase_module.so
 vendor/lib/libchromatix_t4ka3_cpp_liveshot.so
-vendor/lib/libdisp-aba.so
 vendor/lib/libwvdrm_L1.so
 vendor/lib/libchromatix_t4ka3_liveshot.so
 vendor/lib/lib-imsrcs.so
@@ -229,11 +226,9 @@ vendor/lib/libchromatix_t4ka3_vt_open.so
 vendor/lib/libalarmservice_jni.so
 vendor/lib/libwfdcommonutils.so
 vendor/lib/libchromatix_imx234_video_dual.so
-vendor/lib/libOmxWmaDec.so
 vendor/lib/libsd_sdk_display.so
 vendor/lib/libmmcamera2_pproc_modules.so
 vendor/lib/liboemcamera.so
-vendor/lib/libmm-abl.so
 vendor/lib/libchromatix_t4ka3_cpp_preview_open.so
 vendor/lib/libchromatix_imx208_vt.so
 vendor/lib/libflash_pmic.so
@@ -252,7 +247,6 @@ vendor/lib/libqdp.so
 vendor/lib/libactuator_lc898122_camera.so
 vendor/lib/libI420colorconvert.so
 vendor/lib/libmmqjpegdma.so
-vendor/lib/libOmxEvrcDec.so
 vendor/lib/libchromatix_t4ka3_postproc.so
 vendor/lib/libactuator_rohm_bu64243gwz_camcorder.so
 vendor/lib/libmmcamera_imx234.so
@@ -276,7 +270,6 @@ vendor/lib/libmm-qdcm.so
 vendor/lib/libqmi_cci.so
 vendor/lib/libpvr.so
 vendor/lib/libmmcamera_isp_scaler_viewfinder44.so
-vendor/lib/libOmxAacDec.so
 vendor/lib/libmmcamera_isp_demosaic44.so
 vendor/lib/libdpmfdmgr.so
 vendor/lib/libchromatix_t4ka3_preview_open.so
@@ -286,7 +279,6 @@ vendor/lib/libchromatix_imx234_video_hdr.so
 vendor/lib/libmmcamera_isp_mesh_rolloff44.so
 vendor/lib/libqmi.so
 vendor/lib/libmmcamera_isp_chroma_suppress40.so
-vendor/lib/libOmxQcelp13Dec.so
 vendor/lib/libsecureui.so
 vendor/lib/libchromatix_imx234_cpp_liveshot_open.so
 vendor/lib/libchromatix_imx208_liveshot.so
@@ -304,7 +296,6 @@ vendor/lib/lib-rtpdaemoninterface.so
 vendor/lib/libactuator_dw9714_camera.so
 vendor/lib/libchromatix_imx234_snapshot_open.so
 vendor/lib/liboemcrypto.so
-vendor/lib/libmm-abl-oem.so
 vendor/lib/lib-imsdpl.so
 vendor/lib/libDivxDrm.so
 vendor/lib/libfastcvopt.so
@@ -494,7 +485,6 @@ vendor/lib64/libwfdsm.so
 vendor/lib64/libsensor_reg.so
 vendor/lib64/libwfduibcsink.so
 vendor/lib64/libmmosal.so
-vendor/lib64/libscale.so
 vendor/lib64/libulp2.so
 vendor/lib64/libCommandSvc.so
 vendor/lib64/libadiertac.so
@@ -519,7 +509,6 @@ vendor/lib64/liblbs_core.so
 vendor/lib64/libStDrvInt.so
 vendor/lib64/libRSDriver_adreno.so
 vendor/lib64/libril-qcril-hook-oem.so
-vendor/lib64/libOmxAmrwbplusDec.so
 vendor/lib64/libextendedremotedisplay.so
 vendor/lib64/libadreno_utils.so
 vendor/lib64/libwfdmmsink.so
@@ -570,7 +559,6 @@ vendor/lib64/libcne.so
 vendor/lib64/libsubsystem_control.so
 vendor/lib64/libwfdrtsp.so
 vendor/lib64/librs_adreno.so
-vendor/lib64/libdisp-aba.so
 vendor/lib64/lib-imsrcs.so
 vendor/lib64/lib-imsrcscm.so
 vendor/lib64/libconfigdb.so
@@ -580,9 +568,7 @@ vendor/lib64/libnetmgr.so
 vendor/lib64/libqmi_csi.so
 vendor/lib64/libalarmservice_jni.so
 vendor/lib64/libwfdcommonutils.so
-vendor/lib64/libOmxWmaDec.so
 vendor/lib64/libsd_sdk_display.so
-vendor/lib64/libmm-abl.so
 vendor/lib64/libgeofence.so
 vendor/lib64/libmdmdetect.so
 vendor/lib64/lib-rtpsl.so
@@ -604,7 +590,6 @@ vendor/lib64/libmmipstreamutils.so
 vendor/lib64/libmm-qdcm.so
 vendor/lib64/libqmi_cci.so
 vendor/lib64/libpvr.so
-vendor/lib64/libOmxAacDec.so
 vendor/lib64/libdpmfdmgr.so
 vendor/lib64/libxml.so
 vendor/lib64/libqmi.so
@@ -615,7 +600,6 @@ vendor/lib64/libdsutils.so
 vendor/lib64/libc2d30-a3xx.so
 vendor/lib64/libssd.so
 vendor/lib64/lib-rtpdaemoninterface.so
-vendor/lib64/libmm-abl-oem.so
 vendor/lib64/lib-imsdpl.so
 vendor/lib64/libDivxDrm.so
 vendor/lib64/libvoice-svc.so
@@ -702,7 +686,6 @@ bin/energy-awareness
 bin/imscmservice
 bin/ATFWD-daemon
 bin/netmgrd
-bin/mm-pp-daemon
 bin/mm-qcamera-daemon
 bin/qseecomd
 bin/mm-qcamera-app

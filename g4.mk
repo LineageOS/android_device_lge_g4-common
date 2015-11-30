@@ -215,7 +215,6 @@ PRODUCT_COPY_FILES += \
 # OMX
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
-    libdashplayer \
     libdivxdrmdecrypt \
     libextmedia_jni \
     libOmxAacEnc \
@@ -225,16 +224,10 @@ PRODUCT_PACKAGES += \
     libOmxQcelp13Enc \
     libOmxSwVencMpeg4 \
     libOmxVdec \
-    libOmxVdecHevc \
     libOmxVenc \
     libOmxVidcCommon \
     libstagefrighthw \
-    libstagefright_soft_flacdec \
-    libqcmediaplayer \
-    qcmediaplayer
-
-PRODUCT_BOOT_JARS += \
-    qcmediaplayer
+    libstagefright_soft_flacdec
 
 # Power
 PRODUCT_PACKAGES += \
