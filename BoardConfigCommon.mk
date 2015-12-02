@@ -45,6 +45,8 @@ TARGET_NO_BOOTLOADER := true
 
 TARGET_USES_C2D_COMPOSITION := true
 
+ART_USE_OPTIMIZING_COMPILER := true
+
 # Kernel
 BOARD_DTBTOOL_ARGS := -2
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=31 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 msm_rtb.filter=0x37 boot_cpus=0-5
