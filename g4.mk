@@ -177,6 +177,10 @@ PRODUCT_PACKAGES += \
     memtrack.msm8992 \
     liboverlay
 
+# Dot View Case
+PRODUCT_PACKAGES += \
+    Dotcase
+
 # Keystore
 PRODUCT_PACKAGES += \
     keystore.msm8992 \
