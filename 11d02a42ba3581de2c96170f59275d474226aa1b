@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3fce034c_a72a8ae4",
+        "filename": "overlay/packages/apps/Snap/res/values/config.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 848
+      },
+      "writtenOn": "2016-01-06T05:46:11Z",
+      "side": 1,
+      "message": "Ewww whitespace!",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 4
+      },
+      "revId": "11d02a42ba3581de2c96170f59275d474226aa1b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
