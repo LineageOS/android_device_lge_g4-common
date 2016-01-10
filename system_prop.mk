@@ -6,9 +6,9 @@
 PRODUCT_PROPERTY_OVERRIDES += \
     vidc.enc.dcvs.extra-buff-count=2 \
 
-# Camera: Force use 1920x1080 for preview
+# Camera: Force use QHD (2560x1440) for preview
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.camera.preview.size=4
+    persist.camera.preview.size=5
 
 #Audio   
 PRODUCT_PROPERTY_OVERRIDES += \
