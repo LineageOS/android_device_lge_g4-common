@@ -127,7 +127,8 @@ PRODUCT_PACKAGES += \
     thermanager
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/thermanager.xml:system/etc/thermanager.xml
+    $(LOCAL_PATH)/configs/thermanager.xml:system/etc/thermanager.xml \
+    $(LOCAL_PATH)/configs/thermanager-boot.xml:system/etc/thermanager-boot.xml
 
 # Sony timekeep
 PRODUCT_PACKAGES += \
