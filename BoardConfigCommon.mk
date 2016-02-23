@@ -158,6 +158,7 @@ TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/input/lge_touch/tap2wake"
 
 # Qualcomm support
 BOARD_USES_QCOM_HARDWARE := true
+TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 
 # Init
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
