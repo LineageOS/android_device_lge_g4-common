@@ -888,6 +888,8 @@ case "$target" in
 
         # enable low power mode sleep
         echo 0 > /sys/module/lpm_levels/parameters/sleep_disabled
+        # Disable zRAM
+        swapoff /dev/block/zram0
     ;;
 esac
 
