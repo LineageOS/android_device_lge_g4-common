@@ -245,5 +245,6 @@ PRODUCT_PACKAGES += \
 
 # Misc
 PRODUCT_PACKAGES += \
-     libcnefeatureconfig \
-     libxml2
+    libcnefeatureconfig \
+    librmnetctl \
+    libxml2
