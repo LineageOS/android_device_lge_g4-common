@@ -66,6 +66,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Qualcomm
 PRODUCT_PROPERTY_OVERRIDES += \
+	ro.min_freq_0=384000 \
+	ro.min_freq_4=384000 \
     persist.timed.enable=true \
     ro.qualcomm.cabl=2 \
     ro.vendor.extension_library=libqti-perfd-client.so \
