@@ -841,6 +841,13 @@ case "$target" in
         # Disable sched_boost
         echo 0 > /proc/sys/kernel/sched_boost
 
+        #cpufreq
+        # Configure foreground and background cpuset
+        echo 0-5 > /dev/cpuset/foreground/cpus
+        echo 4-5 > /dev/cpuset/foreground/boost/cpus
+        echo 0-2 > /dev/cpuset/background/cpus
+        echo 0-3 > /dev/cpuset/system-background/cpus
+
         # Disable retention and standalone power collapse
         echo "N" > /sys/module/lpm_levels/system/a53/cpu0/retention/idle_enabled
         echo "N" > /sys/module/lpm_levels/system/a53/cpu1/retention/idle_enabled
