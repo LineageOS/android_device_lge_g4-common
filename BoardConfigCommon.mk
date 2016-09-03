@@ -47,7 +47,7 @@ TARGET_USES_C2D_COMPOSITION := true
 
 # Kernel
 BOARD_DTBTOOL_ARGS := -2
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=31 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 msm_rtb.filter=0x37 boot_cpus=0-5
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=31 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 msm_rtb.filter=0x37 boot_cpus=0-5 androidboot.selinux=disabled
 BOARD_KERNEL_BASE := 0x00078000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_RAMDISK_OFFSET := 0x02000000
@@ -124,7 +124,7 @@ TARGET_NO_RPC := true
 
 # Camera
 USE_DEVICE_SPECIFIC_CAMERA := true
-COMMON_GLOBAL_CFLAGS += -DLG_CAMERA_HARDWARE
+#COMMON_GLOBAL_CFLAGS += -DLG_CAMERA_HARDWARE
 
 # Display
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
@@ -149,9 +149,9 @@ TARGET_PROVIDES_LIBLIGHT := true
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
 #BOARD_CHARGER_ENABLE_SUSPEND := true
 
-COMMON_GLOBAL_CFLAGS += \
-    -DBOARD_CHARGING_CMDLINE_NAME='"androidboot.mode"' \
-    -DBOARD_CHARGING_CMDLINE_VALUE='"chargerlogo"'
+#COMMON_GLOBAL_CFLAGS += \
+#    -DBOARD_CHARGING_CMDLINE_NAME='"androidboot.mode"' \
+#    -DBOARD_CHARGING_CMDLINE_VALUE='"chargerlogo"'
 
 # Power
 TARGET_POWERHAL_VARIANT := qcom
@@ -167,8 +167,8 @@ TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
 TARGET_PROVIDES_KEYMASTER := true
 
 # SELinux
-include device/qcom/sepolicy/sepolicy.mk
-BOARD_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy
+#include device/qcom/sepolicy/sepolicy.mk
+#BOARD_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy
 
 # Disable HW based full disk encryption
 TARGET_HW_DISK_ENCRYPTION := false
