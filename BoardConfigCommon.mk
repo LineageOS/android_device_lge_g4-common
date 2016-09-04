@@ -111,7 +111,7 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
-BOARD_BLUEDROID_VENDOR_CONF := device/lge/g4-common/bluetooth/libbt_vndcfg.txt
+BOARD_CUSTOM_BT_CONFIG := device/lge/g4-common/bluetooth/libbt_vndcfg.txt
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/g4-common/bluetooth
 
 # RIL
@@ -124,7 +124,6 @@ TARGET_NO_RPC := true
 
 # Camera
 USE_DEVICE_SPECIFIC_CAMERA := true
-COMMON_GLOBAL_CFLAGS += -DLG_CAMERA_HARDWARE
 
 # Display
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
@@ -147,11 +146,6 @@ TARGET_PROVIDES_LIBLIGHT := true
 
 # Offmode Charging
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
-#BOARD_CHARGER_ENABLE_SUSPEND := true
-
-COMMON_GLOBAL_CFLAGS += \
-    -DBOARD_CHARGING_CMDLINE_NAME='"androidboot.mode"' \
-    -DBOARD_CHARGING_CMDLINE_VALUE='"chargerlogo"'
 
 # Power
 TARGET_POWERHAL_VARIANT := qcom
