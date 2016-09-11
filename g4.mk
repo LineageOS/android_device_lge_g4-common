@@ -93,10 +93,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fs_config_files
 
-# RIL
-PRODUCT_PACKAGES += \
-	liblge
-
 # Audio
 PRODUCT_PACKAGES += \
     audiod \
