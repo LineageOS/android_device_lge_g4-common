@@ -41,7 +41,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # 196609 is decimal for 0x30001 to report major/minor versions as 3/1
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.hwc.mdpcomp.enable=true \
-    ro.opengles.version=196609 \
+    ro.opengles.version=196610 \
     ro.sf.lcd_density=560
 
 # GPS
