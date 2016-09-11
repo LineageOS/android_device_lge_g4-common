@@ -264,5 +264,6 @@ PRODUCT_PACKAGES += \
 # Misc
 PRODUCT_PACKAGES += \
     libcnefeatureconfig \
+    libqsap_sdk \
     librmnetctl \
     libxml2
