@@ -18,7 +18,6 @@ lib64/libvss_nv_idl.so
 lib64/libvss_resim_iface.so
 lib64/libvss_common_iface.so
 lib64/libvss_common_idl.so
-lib64/libril.so
 lib64/libcir_driver.so
 lib64/libloc_ds_api.so
 lib64/libvss_nv_iface.so
