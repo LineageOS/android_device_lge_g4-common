@@ -18,6 +18,7 @@
 
 #define LOG_TAG "Camera3Wrapper"
 #include <cutils/log.h>
+#include <camera/CameraMetadata.h>
 
 #include "CameraWrapper.h"
 #include "Camera3Wrapper.h"
@@ -106,6 +107,9 @@ static int camera3_process_capture_request(const camera3_device_t *device, camer
 
     if (!device)
         return -1;
+
+    //android::CameraMetadata meta;
+    //meta = request->settings;
 
     return VENDOR_CALL(device, process_capture_request, request);
 }
@@ -232,7 +236,7 @@ int camera3_device_open(const hw_module_t *module, const char *name,
         memset(camera3_ops, 0, sizeof(*camera3_ops));
 
         camera3_device->base.common.tag = HARDWARE_DEVICE_TAG;
-        camera3_device->base.common.version = CAMERA_DEVICE_API_VERSION_3_2;
+        camera3_device->base.common.version = CAMERA_DEVICE_API_VERSION_3_0;
         camera3_device->base.common.module = (hw_module_t *)(module);
         camera3_device->base.common.close = camera3_device_close;
         camera3_device->base.ops = camera3_ops;

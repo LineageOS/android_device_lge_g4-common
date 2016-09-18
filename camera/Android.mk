@@ -4,14 +4,21 @@ include $(CLEAR_VARS)
 LOCAL_SRC_FILES := \
     CameraWrapper.cpp \
     Camera2Wrapper.cpp \
-    Camera3Wrapper.cpp
+    Camera3Wrapper.cpp \
+    Metadata.cpp
 
 LOCAL_SHARED_LIBRARIES := \
-    libhardware liblog libcamera_client libutils libcutils
+    libhardware \
+    liblog \
+    libcamera_client \
+    libutils \
+    libcutils \
+    libcamera_metadata
 
 LOCAL_C_INCLUDES += \
     system/core/include \
-    system/media/camera/include
+    system/media/camera/include \
+    frameworks/av/include
 
 LOCAL_32_BIT_ONLY := true
 #LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw
