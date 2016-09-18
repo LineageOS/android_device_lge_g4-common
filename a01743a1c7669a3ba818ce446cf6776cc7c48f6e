@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1fa4df85_42933350",
+        "filename": "system_prop.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 7880
+      },
+      "writtenOn": "2016-09-18T09:45:24Z",
+      "side": 1,
+      "message": "Why is this even categorised under media?",
+      "revId": "a01743a1c7669a3ba818ce446cf6776cc7c48f6e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
