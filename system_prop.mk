@@ -7,7 +7,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vidc.enc.dcvs.extra-buff-count=2 \
     persist.camera.cpp.duplication=false
 
-#Audio
+# Audio
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.qc.sdk.audio.ssr=false \
     persist.audio.ssr.3mic=false \
@@ -41,7 +41,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196610 \
     ro.sf.lcd_density=560
 
-#Perfd
+# Perfd
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.min_freq_0=384000 \
     ro.min_freq_4=384000

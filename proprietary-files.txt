@@ -31,7 +31,7 @@ lib/libvss_dmi_qcci.so
 lib/libVDHDRAPI.so
 lib/hw/consumerir.msm8992.so
 lib/hw/wbc_hal.default.so
-lib/hw/camera.msm8992.so
+lib/hw/camera.msm8992.so:lib/hw/camera.vendor.msm8992.so
 lib/libloc_api_v02.so
 lib/libHDR.so
 lib/libmm-qcamera.so
