@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1fa4df85_84f936c9",
+        "filename": "camera/Camera3Wrapper.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 239,
+      "author": {
+        "id": 13293
+      },
+      "writtenOn": "2016-09-19T12:39:48Z",
+      "side": 1,
+      "message": "09-19 16:35:17.287  1659  7257 E Camera3-Device: Camera 0: initialize: HAL reporting mismatched camera_info version (302) and device version (300).",
+      "revId": "854f9f1e1e1ca0569d54b8fef174ec086f8293d1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
