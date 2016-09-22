@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1fa4df85_d6703cdf",
+        "filename": "libhealthd/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 523
+      },
+      "writtenOn": "2016-09-22T17:57:42Z",
+      "side": 1,
+      "message": "Should be: system/core/healthd/include\nAnd in cpp file: #include \u003chealthd/healthd.h\u003e",
+      "range": {
+        "startLine": 7,
+        "startChar": 48,
+        "endLine": 7,
+        "endChar": 55
+      },
+      "revId": "dec93640fe14fa1a84ccca81a4a1c8e19a0d8ea1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
