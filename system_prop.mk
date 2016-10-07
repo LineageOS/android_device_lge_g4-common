@@ -27,6 +27,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     mm.enable.smoothstreaming=true \
     media.aac_51_output_enabled=true \
     qcom.hw.aac.encoder=true \
+	media.stagefright.legacyencoder=true \
+	media.stagefright.less-secure=true
+	
+# Storage
+PRODUCT_PROPERTY_OVERRIDES += \
     ro.sys.sdcardfs=true
 
 # Bluetooth
