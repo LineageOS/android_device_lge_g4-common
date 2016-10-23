@@ -1,0 +1,5 @@
+allow priv_app vfat:dir { rw_dir_perms };
+allow priv_app vfat:file { rw_file_perms create };
+
+allow priv_app device:dir { read open };
+allow priv_app device:file { read open };
