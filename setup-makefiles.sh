@@ -5,6 +5,8 @@ export VENDOR=lge
 OUTDIR=vendor/$VENDOR/$DEVICE
 MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk
 
+printf '\n%s\n' "\$(call inherit-product, vendor/qcom/binaries/msm8992/graphics/graphics-vendor.mk)" >> "$MAKEFILE"
+
 (cat << EOF) > $MAKEFILE
 # Copyright (C) 2015 The CyanogenMod Project
 #
