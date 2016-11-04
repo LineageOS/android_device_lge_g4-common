@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ff2e2bb8_d2c6db49",
+        "filename": "overlay/frameworks/base/core/res/res/values/config.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 294,
+      "author": {
+        "id": 11801
+      },
+      "writtenOn": "2016-11-04T23:12:05Z",
+      "side": 1,
+      "message": "There should not be spaces between network types and pipe symbol",
+      "revId": "0c8c2d8889905ce9dd494cdcbcbcd885fafc1bfb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
