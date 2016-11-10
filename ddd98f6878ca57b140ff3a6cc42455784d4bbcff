@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ff2e2bb8_4cb97c78",
+        "filename": "power/power_ext.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 3671
+      },
+      "writtenOn": "2016-11-10T19:03:45Z",
+      "side": 1,
+      "message": "put max first or you\u0027ll run into this: http://review.cyanogenmod.org/#/c/170236/",
+      "revId": "ddd98f6878ca57b140ff3a6cc42455784d4bbcff",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
