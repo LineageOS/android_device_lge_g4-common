@@ -229,7 +229,7 @@
          it causes the device to wake up.
          The default is false. -->
     <bool name="config_lidControlsSleep">true</bool>
-
+    
     <!-- Make things go fast -->
     <bool name="config_ui_enableFadingMarquee">false</bool>
 
