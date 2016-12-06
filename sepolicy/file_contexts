@@ -11,12 +11,18 @@
 /sns                                u:object_r:sensors_data_file:s0
 /sns/cal(/.*)?                      u:object_r:sensors_data_file:s0
 
+<<<<<<< HEAD
 /dev/ttyHSL1                        u:object_r:cir_device:s0
 
 /system/bin/hwaddrs                 u:object_r:hwaddrs_exec:s0
 /system/bin/imswmsproxy             u:object_r:imswmsproxy_exec:s0
 /system/bin/thermanager             u:object_r:thermanager_exec:s0
 /system/bin/timekeep                u:object_r:timekeep_exec:s0
+=======
+# Sensors
+/dev/cm3602                             u:object_r:sensors_device:s0
+/dev/lightsensor                        u:object_r:sensors_device:s0
+>>>>>>> 4495410... msm8916-common: sepolicy: Don't label /data/misc/perfd
 
 /data/misc/bdaddr                   u:object_r:bluetooth_data_file:s0
 /data/misc/perfd(/.*)?              u:object_r:mpctl_socket:s0
