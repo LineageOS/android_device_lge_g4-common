@@ -1025,6 +1025,7 @@ on property:init.svc.bootanim=running
 
 on property:init.svc.bootanim=stopped
     start usf-post-boot
+    restart mediaserver
 
 on property:sys.boot_completed=1
     start qcom-post-boot
