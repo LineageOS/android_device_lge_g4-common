@@ -60,6 +60,24 @@
     },
     {
       "key": {
+        "uuid": "fa5d592f_59528f14",
+        "filename": "consumerir/consumerir.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 11801
+      },
+      "writtenOn": "2017-02-15T21:32:07Z",
+      "side": 1,
+      "message": "Yea, 115200\n#define LG_IR_MAGIC_BAUD_RATE (or something similar) would make more sense from a readability standpoint than tossing 115200 into the code, especially to those who are unfamiliar with LG\u0027s IR stuff. (I figured it out by looking at the extern transmitIr function\u0027s parameters, but not a fan of \"magic numbers\")",
+      "parentUuid": "fa5d592f_3e3b41ed",
+      "revId": "3139cda7d8c5ff5e41155c6a979a4cc4049edfee",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fa5d592f_fe5da949",
         "filename": "consumerir/consumerir.c",
         "patchSetId": 1
