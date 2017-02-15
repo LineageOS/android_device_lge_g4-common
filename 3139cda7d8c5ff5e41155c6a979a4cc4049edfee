@@ -1,0 +1,78 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa5d592f_3e6d8105",
+        "filename": "consumerir/consumerir.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 11801
+      },
+      "writtenOn": "2017-02-15T21:21:00Z",
+      "side": 1,
+      "message": "Why not just make this a define?",
+      "range": {
+        "startLine": 44,
+        "startChar": 0,
+        "endLine": 44,
+        "endChar": 4
+      },
+      "revId": "3139cda7d8c5ff5e41155c6a979a4cc4049edfee",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa5d592f_fe76c9d7",
+        "filename": "consumerir/consumerir.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 11801
+      },
+      "writtenOn": "2017-02-15T21:21:00Z",
+      "side": 1,
+      "message": "Do you know what the magic number is being used for?\nIf magic numbers are necessary, best to use a define macro",
+      "revId": "3139cda7d8c5ff5e41155c6a979a4cc4049edfee",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa5d592f_fe5da949",
+        "filename": "consumerir/consumerir.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 11801
+      },
+      "writtenOn": "2017-02-15T21:21:00Z",
+      "side": 1,
+      "message": "you could change this to call the get_num_carrier_freqs method, but then you\u0027d have to remove the __unused macro from *dev, since get_num_carrier_freqs requires that as a parameter",
+      "revId": "3139cda7d8c5ff5e41155c6a979a4cc4049edfee",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa5d592f_de5ae54f",
+        "filename": "consumerir/consumerir.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 11801
+      },
+      "writtenOn": "2017-02-15T21:21:00Z",
+      "side": 1,
+      "message": "newline before \"if(device \u003d\u003d NULL) {\"?",
+      "revId": "3139cda7d8c5ff5e41155c6a979a4cc4049edfee",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
