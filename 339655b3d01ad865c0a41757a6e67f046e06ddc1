@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa5d592f_04d14afb",
+        "filename": "sepolicy/rmt_storage.te",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2017-02-16T09:39:17Z",
+      "side": 1,
+      "message": "You don\u0027t need this according to your log.",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 42
+      },
+      "revId": "339655b3d01ad865c0a41757a6e67f046e06ddc1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
