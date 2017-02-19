@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa5d592f_f62145b5",
+        "filename": "sepolicy/rmt_storage.te",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 523
+      },
+      "writtenOn": "2017-02-19T17:34:43Z",
+      "side": 1,
+      "message": "allow rmt_storage self:capability { dac_override net_raw };",
+      "range": {
+        "startLine": 4,
+        "startChar": 34,
+        "endLine": 4,
+        "endChar": 41
+      },
+      "revId": "4c007cf459a1133c47c06ed81dd27ab3eaf392b5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
