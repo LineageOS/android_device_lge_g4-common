@@ -88,6 +88,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.add_power_save=1 \
     persist.telephony.oosisdc=false
 
+# IMS
+PRODUCT_PROPERTY_OVERRIDES += \
+   persist.radio.jbims=1 \
+   persist.radio.ROTATION_ENABLE=1 \
+   persist.radio.VT_ENABLE=1 \
+   persist.radio.VT_HYBRID_ENABLE=1 \
+   persist.radio.VT_USE_MDM_TIME=0
+
 # Factory Reset Protection
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.frp.pst=/dev/block/bootdevice/by-name/persistent

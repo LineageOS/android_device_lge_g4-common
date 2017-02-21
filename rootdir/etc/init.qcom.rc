@@ -1069,6 +1069,43 @@ on property:persist.service.criticaltemp=1
    write /sys/devices/virtual/thermal/thermal_zone13/ctrl_crit_temp 1
    write /sys/devices/virtual/thermal/thermal_zone14/ctrl_crit_temp 1
 
+
+service ims_rtp_daemon /system/bin/ims_rtp_daemon
+   class main
+   user system
+   socket ims_rtpd stream 0660 system radio
+   group radio net_raw diag diag inet log
+   disabled
+
+on property:sys.ims.DATA_DAEMON_STATUS=1
+    start ims_rtp_daemon
+
+service imscmservice /system/bin/imscmservice
+      class main
+      user system
+    group radio net_raw diag diag log
+    disabled
+
+on property:sys.ims.DATA_DAEMON_STATUS=1
+    start imscmservice
+
+service imsdatadaemon /system/bin/imsdatadaemon
+    class main
+    user system
+    socket ims_datad stream 0660 system radio
+    group system wifi radio inet net_raw log diag net_admin
+    disabled
+
+on property:sys.ims.QMI_DAEMON_STATUS=1
+    start imsdatadaemon
+
+service imsqmidaemon /system/bin/imsqmidaemon
+    class main
+    user system
+    socket ims_qmid stream 0660 system radio
+    group radio net_raw log diag
+
+
 # LGE IMS Features - To interwork with QMI WMS (64-bit exe/lib)
 service imswmsproxy /system/bin/imswmsproxy
     class main
