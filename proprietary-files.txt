@@ -3,7 +3,7 @@ lib64/libqdMetaData.so
 lib64/libvss_bsp_qcci.so
 lib64/libvss_dmi_qcci.so
 lib64/hw/wbc_hal.default.so
-lib64/libloc_api_v02.so
+-lib64/libloc_api_v02.so
 lib64/libvss_resim_core.so
 lib64/libuicc.so
 lib64/libcurl.so
@@ -15,8 +15,8 @@ lib64/libvss_nv_idl.so
 lib64/libvss_resim_iface.so
 lib64/libvss_common_iface.so
 lib64/libvss_common_idl.so
-lib64/libcir_driver.so
-lib64/libloc_ds_api.so
+-lib64/libcir_driver.so
+-lib64/libloc_ds_api.so
 lib64/libvss_nv_iface.so
 lib64/libmdmcutback.so
 lib64/libmotext_inf.so
@@ -29,7 +29,7 @@ lib/libvss_dmi_qcci.so
 lib/libVDHDRAPI.so
 lib/hw/wbc_hal.default.so
 lib/hw/camera.msm8992.so
-lib/libloc_api_v02.so
+-lib/libloc_api_v02.so
 lib/libHDR.so
 lib/libmm-qcamera.so
 lib/libmorpho_image_stab31.so
@@ -48,19 +48,19 @@ lib/libvss_resim_iface.so
 lib/libvss_common_iface.so
 lib/libvss_common_idl.so
 lib/liblgmda.so
-lib/libcir_driver.so
+-lib/libcir_driver.so
 lib/libVDBase.so
 lib/libalmalib.so
 lib/libalmcaswrap.so
 lib/libmmcamera_interface.so
 lib/libVDLowLightAPI.so
-lib/libloc_ds_api.so
+-lib/libloc_ds_api.so
 lib/libvss_nv_iface.so
 lib/libalhdri.so
 lib/libmdmcutback.so
 lib/libmotext_inf.so
 lib/libqmimotext.so
-priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+-priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/firmware/libpn547_fw_C9.so
 vendor/firmware/BCM4339_003.001.009.0117.0620_LGE_P1_EU.hcd:vendor/firmware/BCM4335_003.001.009.0117.0620_LGE_P1_EU.hcd
 vendor/firmware/libpn547_fw.so
@@ -79,7 +79,7 @@ vendor/lib64/libmmwfdinterface.so
 vendor/lib64/libOmxAacDec.so
 vendor/lib64/lib-imsdpl.so
 vendor/lib64/libalarmservice_jni.so
-vendor/lib64/libmdmdetect.so
+-vendor/lib64/libmdmdetect.so
 vendor/lib64/libmmwfdsrcinterface.so
 vendor/lib64/libqti-gt.so
 vendor/lib64/libOmxWmaDec.so
@@ -105,7 +105,7 @@ vendor/lib64/libsmemlog.so
 vendor/lib64/libmare-cpu-1.0.0.so
 vendor/lib64/lib-imsxml.so
 vendor/lib64/librs_adreno_sha1.so
-vendor/lib64/libFlacSwDec.so
+-vendor/lib64/libFlacSwDec.so
 vendor/lib64/libwfduibcsink.so
 vendor/lib64/libmmipstreamnetwork.so
 vendor/lib64/libC2D2.so
@@ -133,7 +133,7 @@ vendor/lib64/libmm-disp-apis.so
 vendor/lib64/libqmi.so
 vendor/lib64/lib-rcsjni.so
 vendor/lib64/libdsutils.so
-vendor/lib64/libmm-abl.so
+-vendor/lib64/libmm-abl.so
 vendor/lib64/libmm-hdcpmgr.so
 vendor/lib64/libsd_sdk_display.so
 vendor/lib64/libqdi.so
@@ -151,7 +151,7 @@ vendor/lib64/libcne.so
 vendor/lib64/lib-dplmedia.so
 vendor/lib64/libquipc_os_api.so
 vendor/lib64/libsi.so
-vendor/lib64/libperipheral_client.so
+-vendor/lib64/libperipheral_client.so
 vendor/lib64/libssd.so
 vendor/lib64/libCB.so
 vendor/lib64/libdisp-aba.so
@@ -216,7 +216,7 @@ vendor/lib64/libsensor1.so
 vendor/lib64/liblocationservice.so
 vendor/lib64/libnetmgr.so
 vendor/lib64/libI420colorconvert.so
-vendor/lib64/libtime_genoff.so
+-vendor/lib64/libtime_genoff.so
 vendor/lib64/libizat_core.so
 vendor/lib64/liblowi_client.so
 vendor/lib64/egl/libq3dtools_adreno.so
@@ -288,7 +288,7 @@ vendor/lib/libchromatix_t4ka3_cpp_snapshot.so
 vendor/lib/libmmcamera2_iface_modules.so
 vendor/lib/lib-imsdpl.so
 vendor/lib/libalarmservice_jni.so
-vendor/lib/libmdmdetect.so
+-vendor/lib/libmdmdetect.so
 vendor/lib/libmmwfdsrcinterface.so
 vendor/lib/libqti-gt.so
 vendor/lib/libchromatix_t4ka3_common.so
@@ -346,7 +346,7 @@ vendor/lib/libactuator_lc898212xd_camcorder.so
 vendor/lib/libmmcamera_isp_ltm44.so
 vendor/lib/libflash_pmic.so
 vendor/lib/libchromatix_t4ka3_vt_open.so
-vendor/lib/libFlacSwDec.so
+-vendor/lib/libFlacSwDec.so
 vendor/lib/libchromatix_imx234_video_hdr_open.so
 vendor/lib/libmmcamera2_cpp_module.so
 vendor/lib/libmmcamera_isp_luma_adaptation40.so
@@ -430,7 +430,7 @@ vendor/lib/lib-dplmedia.so
 vendor/lib/libquipc_os_api.so
 vendor/lib/libchromatix_imx234_hfr_60.so
 vendor/lib/libsi.so
-vendor/lib/libperipheral_client.so
+-vendor/lib/libperipheral_client.so
 vendor/lib/libmmcamera2_pproc_modules.so
 vendor/lib/libAlAisTune.so
 vendor/lib/libchromatix_imx234_hfr_120_open.so
@@ -484,7 +484,7 @@ vendor/lib/libwvdrm_L1.so
 vendor/lib/libscve_stub.so
 vendor/lib/libchromatix_t4ka3_mms_video_open.so
 vendor/lib/libaudioalsa.so
-vendor/lib/libmm-abl-oem.so
+-vendor/lib/libmm-abl-oem.so
 vendor/lib/libmm-color-convertor.so
 vendor/lib/libmmcamera_isp_wb40.so
 vendor/lib/libmmcamera_isp_gamma44.so
@@ -584,7 +584,7 @@ vendor/lib/libI420colorconvert.so
 vendor/lib/libactuator_dw9714_camcorder.so
 vendor/lib/libois_lc898122.so
 vendor/lib/libmmjpeg.so
-vendor/lib/libtime_genoff.so
+-vendor/lib/libtime_genoff.so
 vendor/lib/libAlAisWrap.so
 vendor/lib/liblowi_client.so
 vendor/lib/libchromatix_imx234_snapshot.so
@@ -693,8 +693,8 @@ vendor/bin/ntcode_listing.sh
 vendor/bin/runtime_boot_cache_res.sh
 vendor/bin/enable_uninstall.sh
 vendor/bin/cota_update.sh
-framework/qcrilhook.jar
-framework/qcnvitems.jar
+-framework/qcrilhook.jar
+-framework/qcnvitems.jar
 etc/firmware/cpp_firmware_v1_1_1.fw
 etc/firmware/fw_bcmdhd_mfg.bin
 etc/firmware/fw_bcmdhd_apsta.bin
