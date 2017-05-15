@@ -121,10 +121,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Snap
 
-# Gello
-PRODUCT_PACKAGES += \
-    Gello
-
 # Thermal
 PRODUCT_PACKAGES += \
     thermanager
