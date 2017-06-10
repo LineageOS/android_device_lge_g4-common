@@ -15,7 +15,7 @@ MicroSD | Up to 128GB
 Battery | 3000 mAh
 Dimensions | 148.9 x 76.1 x 6.3 - 9.8 mm
 Display | 2560 x 1440 pixels, 5.5" HD-IPS LCD
-Rear Camera  | 16 MP hybrid infared autofocus, dual-LED flash
+Rear Camera  | 16 MP hybrid infared autofocus
 Front Camera | 8 MP
 Release Date | April 2015
 
