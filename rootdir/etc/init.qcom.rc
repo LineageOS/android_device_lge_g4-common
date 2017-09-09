@@ -59,8 +59,6 @@ on early-fs
     chown system /sys/process/task_comm_list
 
 on init
-    # Shim libs
-    export LD_SHIM_LIBS "/system/vendor/lib/libwvm.so|libshims_wvm.so:/system/bin/mm-qcamera-daemon|libshims_camera.so"
 
     mkdir /firmware 0771 system system
     mkdir /firmware/image 0771 system system
@@ -961,11 +959,10 @@ service thermanager /system/bin/thermanager /system/etc/thermanager.xml
     user root
     group root
 
-service timekeep /system/bin/timekeep restore
+service time_daemon /system/bin/time_daemon
     class late_start
     user root
     group root
-    oneshot
 
 service adsprpcd /system/bin/adsprpcd
    class main

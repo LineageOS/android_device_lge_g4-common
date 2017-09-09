@@ -135,28 +135,14 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    Snap \
-    libshims_camera
+    Snap
 
 # Thermal
 PRODUCT_PACKAGES += \
-    thermanager
+    thermal.msm8992
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/thermanager.xml:system/etc/thermanager.xml
-
-# Sony timekeep
-PRODUCT_PACKAGES += \
-    timekeep \
-    TimeKeep
-
-# IZat configuration
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/flp.conf:system/etc/flp.conf \
-    $(LOCAL_PATH)/configs/izat.conf:system/etc/izat.conf \
-    $(LOCAL_PATH)/configs/msap.conf:system/etc/msap.conf \
-    $(LOCAL_PATH)/configs/quipc.conf:system/etc/quipc.conf \
-    $(LOCAL_PATH)/configs/sap.conf:system/etc/sap.conf
+    $(LOCAL_PATH)/configs/thermal-engine.conf:system/etc/thermal-engine.conf
 
 # IR
 PRODUCT_PACKAGES += \
@@ -169,7 +155,8 @@ PRODUCT_COPY_FILES += \
 # Sensors
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/sensor_def_common.conf:system/etc/sensors/sensor_def_common.conf \
-    $(LOCAL_PATH)/configs/sensors/sensor_def_variable.conf:system/etc/sensors/sensor_def_variable.conf
+    $(LOCAL_PATH)/configs/sensors/sensor_def_variable.conf:system/etc/sensors/sensor_def_variable.conf \
+    $(LOCAL_PATH)/configs/sensors/hals.conf:system/etc/sensors/hals.conf
 
 # WiFi cal NVRAM file
 PRODUCT_COPY_FILES += \
@@ -212,6 +199,15 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     gps.msm8992
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/gps/etc/flp.conf:system/etc/flp.conf \
+    $(LOCAL_PATH)/gps/etc/gps.conf:system/etc/gps.conf \
+    $(LOCAL_PATH)/gps/etc/izat.conf:system/etc/izat.conf \
+    $(LOCAL_PATH)/gps/etc/flp.conf:system/etc/flp.conf \
+    $(LOCAL_PATH)/gps/etc/lowi.conf:system/etc/lowi.conf \
+    $(LOCAL_PATH)/gps/etc/sap.conf:system/etc/sap.conf \
+    $(LOCAL_PATH)/gps/etc/xtwifi.conf:system/etc/xtwifi.conf
+
 # Lights
 PRODUCT_PACKAGES += \
     lights.msm8992
@@ -248,9 +244,6 @@ PRODUCT_PACKAGES += \
     libstagefrighthw \
     libstagefright_soft_flacdec
 
-# DRM
-PRODUCT_PACKAGES += \
-    libshims_wvm
 
 # Power
 PRODUCT_PACKAGES += \
@@ -272,4 +265,5 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libcnefeatureconfig \
     librmnetctl \
-    libxml2
+    libxml2 \
+    libcurl
