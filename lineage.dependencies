@@ -4,6 +4,10 @@
     "target_path": "kernel/lge/msm8992"
   },
   {
+    "repository": "android_device_lge_common",
+    "target_path": "device/lge/common"
+  },
+  {
     "repository": "android_device_qcom_common",
     "target_path": "device/qcom/common"
   },
