@@ -174,6 +174,9 @@ BOARD_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy
 # Disable HW based full disk encryption
 TARGET_HW_DISK_ENCRYPTION := false
 
+# healthd related
+BOARD_HEALTHD_CUSTOM_CHARGER_RES := $(COMMON_PATH)/healthd/res/images/charger
+
 # NFC
 BOARD_NFC_CHIPSET := pn547
 BOARD_NFC_DEVICE := "/dev/pn547"
