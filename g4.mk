@@ -184,7 +184,8 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
-    gps.msm8992
+    gps.msm8992 \
+    libloc_api_v02
 
 # healthd related
 PRODUCT_PACKAGES += \
