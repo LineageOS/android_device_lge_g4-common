@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "87f278fa_29b9479a",
+        "filename": "hwaddrs/Android.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2020-09-02T21:22:20Z",
+      "side": 0,
+      "message": "changes in this file look not necessary",
+      "revId": "a14a8ad6896bc27562ce0d24d246801f3b66ea36",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
