@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cdc335b1_f9e90f33",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2020-09-02T21:03:43Z",
+      "side": 1,
+      "message": "nope",
+      "range": {
+        "startLine": 32,
+        "startChar": 0,
+        "endLine": 32,
+        "endChar": 36
+      },
+      "revId": "19168d6dc7991f32dd3ad6fff2ffb45fb8be9731",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b6613f5c_bab76acf",
+        "filename": "hwaddrs/hwaddrs.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 13028
+      },
+      "writtenOn": "2020-09-02T21:03:43Z",
+      "side": 1,
+      "message": "random mac isn\u0027t allowed as per charter",
+      "revId": "19168d6dc7991f32dd3ad6fff2ffb45fb8be9731",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
