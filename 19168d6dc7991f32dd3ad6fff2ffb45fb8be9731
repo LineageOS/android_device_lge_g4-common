@@ -39,6 +39,24 @@
       "revId": "19168d6dc7991f32dd3ad6fff2ffb45fb8be9731",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b151f6ec_7119708c",
+        "filename": "hwaddrs/hwaddrs.c",
+        "patchSetId": 4
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 18258
+      },
+      "writtenOn": "2020-09-03T05:24:53Z",
+      "side": 1,
+      "message": "we randomise the address in config path not in misc partition. the real mac is in misc.\ni thought i did a mistake and i randomise misc mac...... what are you talking about ? random wifi is not only allowed but it also has a switch to on/off at android 10. Here we randomise only if it\u0027s 0.",
+      "parentUuid": "b6613f5c_bab76acf",
+      "revId": "19168d6dc7991f32dd3ad6fff2ffb45fb8be9731",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
     }
   ]
 }
