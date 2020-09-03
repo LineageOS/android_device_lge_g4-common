@@ -36,10 +36,12 @@
 #define WIFI_HEX_ADDR 0x3000
 #define WIFI_DATA_PATH "/data/misc/wifi"
 #define WIFI_CONFIG_FILE WIFI_DATA_PATH "/config"
+#define WIFI_BACKUP "/wifi"
 
 #define BT_HEX_ADDR 0x4000
 #define BT_DATA_PATH "/data/misc/bluetooth"
 #define BT_CONFIG_FILE BT_DATA_PATH "/bdaddr"
+#define BT_BACKUP "/bluetooth"
 
 int blank(int fd, int offset);
 
@@ -50,7 +52,7 @@ struct stat st = {0};
 */
 
 int main() {
-    int fd1, fd2;
+    int fd1, fd2, fd3;
     char macbyte;
     char macbuf[3];
     int i;
@@ -91,19 +93,44 @@ int main() {
 
 	fd2 = open(WIFI_CONFIG_FILE, O_CREAT|O_WRONLY|O_TRUNC, S_IRUSR|S_IWUSR|S_IRGRP|S_IROTH);
 	write(fd2, "cur_etheraddr=", 14);
-
+        // If wifi mac address is not 0
 	if (!blank(fd1, WIFI_HEX_ADDR)) {
-
+            fd3 = open(WIFI_BACKUP, O_CREAT|O_WRONLY|O_TRUNC, S_IRUSR|S_IWUSR|S_IRGRP|S_IROTH);
+            write(fd3, "cur_etheraddr=", 14);
 	    for(i = 0; i < 6; i++) {
 		lseek(fd1, 0x3000 + i, SEEK_SET);
 		lseek(fd2, 0, SEEK_END);
 		read(fd1, &macbyte, 1);
 		sprintf(macbuf, "%02x", macbyte);
 		write(fd2, &macbuf, 2);
-		if(i != 5) write(fd2, ":", 1);
+                write(fd3, &macbuf, 2);
+		if(i != 5) {
+                    write(fd2, ":", 1);
+                    write(fd3, ":", 1);
+                }
 	    }
+            // write wifi mac address to /config
 	    write(fd2, "\n", 1);
-	    ALOGI("%s: WiFi mac parsed from misc partition", __func__);
+	    ALOGI("%s: WiFi: mac address parsed from misc partition", __func__);
+            // backup mac address to /wifi
+            write(fd3, "\n", 1);
+            ALOGI("%s: WiFi: mac address back up completed", __func__);
+        // if wifi mac address is 0 and wifi backup is not 0
+        } else if (blank(fd1, WIFI_HEX_ADDR) && (!blank(fd3, WIFI_HEX_ADDR)) {
+            fd3 = open(WIFI_BACKUP, O_RDONLY);
+            write(fd2, "cur_etheraddr=", 14);
+            for(i = 0; i < 6; i++) {
+                lseek(fd3, 0x3000 + i, SEEK_SET);
+                lseek(fd2, 0, SEEK_END);
+                read(fd3, &macbyte, 1);
+                sprintf(macbuf, "%02x", macbyte);
+                write(fd2, &macbuf, 2);
+                if(i != 5) write(fd2, ":", 1);
+            }
+            write(fd2, "\n", 1);
+            ALOGI("%s: WiFi: mac address is 0. Restored from backup", __func__);
+            ALOGI("%s: WiFi: misc partition needs repair ! Your real WiFi mac addr is backed up in /wifi", __func__);
+        // if both misc and wifi mac are 0
 	} else {
 	    srand(time(NULL)+123456789);
 	    memset(wifi_macaddr, 0, 20);
@@ -119,11 +146,13 @@ int main() {
 	    snprintf(wifi_macaddr, sizeof(wifi_macaddr), "%02X:%02X:%02X:%02X:%02X:%02X\n",
 		wifiMac[0], wifiMac[1], wifiMac[2], wifiMac[3], wifiMac[4], wifiMac[5]);
 
-	    ALOGE("%s: The misc partition is corrupt / missing MAC. Generated a random WiFi mac: %s", __func__, wifi_macaddr);
+	    ALOGE("%s: The misc partition is corrupt / missing MAC. Generated a temporary random WiFi mac: %s", __func__, wifi_macaddr);
+            ALOGE("%s: misc partition needs repair !", __func__);
 	    write(fd2, wifi_macaddr, strlen(wifi_macaddr));
 	    write(fd2, "\n", 1);
 	}
 	close(fd2); // close config
+        close(fd3); // close backup
     } else {
 	ALOGI("%s: MAC for WiFi already defined (%s)", __func__, WIFI_CONFIG_FILE);
     }
@@ -148,17 +177,39 @@ int main() {
 	}
 
 	fd2 = open(BT_CONFIG_FILE, O_CREAT|O_WRONLY|O_TRUNC, S_IRUSR|S_IWUSR|S_IRGRP|S_IROTH);
-
+        // if bluetooth mac address is not 0
 	if (!blank(fd1, BT_HEX_ADDR)) {
+            fd3 = open(BT_BACKUP, O_CREAT|O_WRONLY|O_TRUNC, S_IRUSR|S_IWUSR|S_IRGRP|S_IROTH);
 	    for(i = 0; i < 6; i++) {
 		lseek(fd1, 0x4000 + i, SEEK_SET);
 		lseek(fd2, 0, SEEK_END);
 		read(fd1, &macbyte, 1);
 		sprintf(macbuf, "%02x", macbyte);
 		write(fd2, &macbuf, 2);
-		if(i != 5) write(fd2, ":", 1);
+                write(fd3, &macbuf, 2);
+		if(i != 5) {
+                    write(fd2, ":", 1);
+                    write(fd3, ":", 1);
+                }
 	    }
-	    ALOGI("%s: Bluetooth mac parsed from misc partition", __func__);
+            write(fd2, "\n", 1);
+            write(fd3, "\n", 1);
+	    ALOGI("%s: Bluetooth mac parsed from misc partition and back up completed", __func__);
+        // if bluetooth mac address is 0 and if backup is not 0
+        } else if (blank(fd1, BT_HEX_ADDR) && (!blank(fd3, BT_HEX_ADDR)) {
+            fd3 = open(BT_BACKUP, O_RDONLY);
+            for(i = 0; i < 6; i++) {
+                lseek(fd3, 0x4000 + i, SEEK_SET);
+                lseek(fd2, 0, SEEK_END);
+                read(fd3, &macbyte, 1);
+                sprintf(macbuf, "%02x", macbyte);
+                write(fd2, &macbuf, 2);
+                if(i != 5) write(fd2, ":", 1);
+            }
+            write(fd2, "\n", 1);
+            ALOGI("%s: BT: mac address is 0. Restored from backup", __func__);
+            ALOGI("%s: BT: misc partition needs repair ! Your real BT mac address is backed up at /bluetooth", __func__);
+        // if both misc and bt backup are 0
 	} else {
 	    srand(time(NULL));
 	    memset(bt_macaddr, 0, 20);
@@ -173,10 +224,12 @@ int main() {
 	    snprintf(bt_macaddr, sizeof(bt_macaddr), "%02X:%02X:%02X:%02X:%02X:%02X\n",
 		btMac[0], btMac[1], btMac[2], btMac[3], btMac[4], btMac[5]);
 
-	    ALOGE("%s: The misc partition is corrupt / missing MAC. Generated a random Bluetooth mac: %s", __func__, bt_macaddr);
+	    ALOGE("%s: The misc partition is corrupt / missing MAC. Generated a random temporary Bluetooth mac: %s", __func__, bt_macaddr);
+            ALOGE("%s: misc partition needs repair !", __func__);
 	    write(fd2, bt_macaddr, strlen(bt_macaddr));
 	}
 	close(fd2); // close bdaddr
+        close(fd3); // close backup
     } else {
 	ALOGI("%s: MAC for Bluetooth already defined (%s)", __func__, BT_CONFIG_FILE);
     }
